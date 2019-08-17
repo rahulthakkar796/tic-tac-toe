@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="./css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+  </head>
+  <body class="disp">
+    <div style="display:none" class="showError">
+      <center>
+        <h2 style="color: blue;" id="error">
+          You are not logged into metamask,please login to continue
+        </h2>
+      </center>
+    </div>
+    <div style="display:none" class="container">
+      <div class="menu">
+        <center>
+          <h5 id="address">Your ethereum address:</h5>
+        </center>
+        <h1>Tic - Tac - Toe</h1>
+        <h3>How To Play</h3>
+
+        <ol>
+          <li>Player 1 Create a new game by entering the username</li>
+          <li>
+            Player 2 Enter another username and the room id that is displayed on
+            first window.
+          </li>
+          <li>Click on join game.</li>
+        </ol>
+        <h4>Create a new Game</h4>
+        <center>
+          <img
+            style="margin-top:5px;display:none"
+            height="80px"
+            width="80px"
+            id="loader1"
+            src="https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif"
+          />
+        </center>
+        <br />
+        <input
+          type="text"
+          name="name"
+          id="nameNew"
+          placeholder="Enter your name"
+          required
+        />
+        <button id="new">
+          NEW GAME
+        </button>
+
+        <br /><br />
+        <h4>Join an existing game</h4>
+        <center>
+          <img
+            style="margin-top:5px;display:none"
+            height="80px"
+            width="80px"
+            id="loader2"
+            src="https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif"
+          />
+        </center>
+        <br />
+        <input
+          type="text"
+          name="name"
+          id="nameJoin"
+          placeholder="Enter your name"
+          required
+        />
+        <input
+          type="text"
+          name="room"
+          id="room"
+          placeholder="Enter Game ID"
+          required
+        />
+        <button id="join">Join Game</button>
+      </div>
+      <div class="gameBoard" style="display: none;">
+        <h2 id="userHello"></h2>
+        <h3 id="turn"></h3>
+        <table class="center">
+          <tr>
+            <td><button class="tile" id="button_00"></button></td>
+            <td><button class="tile" id="button_01"></button></td>
+            <td><button class="tile" id="button_02"></button></td>
+          </tr>
+          <tr>
+            <td><button class="tile" id="button_10"></button></td>
+            <td><button class="tile" id="button_11"></button></td>
+            <td><button class="tile" id="button_12"></button></td>
+          </tr>
+          <tr>
+            <td><button class="tile" id="button_20"></button></td>
+            <td><button class="tile" id="button_21"></button></td>
+            <td><button class="tile" id="button_22"></button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.1/socket.io.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
